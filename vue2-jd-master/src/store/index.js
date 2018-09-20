@@ -10,13 +10,13 @@ import user from './modules/user'
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  modules: {
-    app,
-    shop,
-    cms,
-    user
-  },
-  getters
+	modules: {
+		app,
+		shop,
+		cms,
+		user
+	},
+	getters
 })
 
 export default store

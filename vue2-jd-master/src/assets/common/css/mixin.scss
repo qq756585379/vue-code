@@ -58,19 +58,19 @@ $fontfamily: 'Microsoft Yahei';
 }
 
 @mixin placeholderColor($color) {
-   ::-webkit-input-placeholder {
+  ::-webkit-input-placeholder {
     /* WebKit browsers */
     color: $color;
   }
-   :-moz-placeholder {
+  :-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
     color: $color;
   }
-   ::-moz-placeholder {
+  ::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     color: $color;
   }
-   :-ms-input-placeholder {
+  :-ms-input-placeholder {
     /* Internet Explorer 10+ */
     color: #999;
   }
