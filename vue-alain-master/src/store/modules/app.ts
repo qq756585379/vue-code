@@ -1,20 +1,19 @@
 const app = {
     namespaced: true,
     state: {
-      isCollapse: false,
-      name: '',
+        isCollapse: false,
+        name: '',
     },
     mutations: {
-      collapse(state: any) {
-        state.isCollapse = !state.isCollapse;
-      },
-      setApp(state: any, appinfo: any) {
-        state.name = appinfo.name;
-      },
+        collapse(state: any) {
+            state.isCollapse = !state.isCollapse;
+        },
+        setApp(state: any, appinfo: any) {
+            state.name = appinfo.name;
+        },
     },
-    actions: {
-    },
-  };
+    actions: {},
+};
 
 
 export default app;

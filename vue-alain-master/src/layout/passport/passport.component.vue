@@ -1,77 +1,77 @@
 <template>
-<div class="passport">
-<div class="container">
-<div class="wrap">
-    <div class="top">
-        <div class="head">
-            <img class="logo" :src="'/assets/logo-color.svg'">
-            <span class="title">vue-alain</span>
+    <div class="passport">
+        <div class="container">
+            <div class="wrap">
+                <div class="top">
+                    <div class="head">
+                        <img class="logo" :src="'/assets/logo-color.svg'">
+                        <span class="title">vue-alain</span>
+                    </div>
+                    <div class="desc">武林中最有影响力的《葵花宝典》；欲练神功，挥刀自宫</div>
+                </div>
+                <router-view></router-view>
+
+                <global-footer :links="links">
+                    Copyright
+                    <i class="anticon anticon-copyright"></i> 2018
+                    <a href="//www.jianshu.com/p/89f995c6fab2" target="_blank">vue-alain</a>出品
+                </global-footer>
+            </div>
         </div>
-        <div class="desc">武林中最有影响力的《葵花宝典》；欲练神功，挥刀自宫</div>
     </div>
-    <router-view></router-view>
-    
-    <global-footer :links="links">
-        Copyright
-        <i class="anticon anticon-copyright"></i> 2018
-        <a href="//www.jianshu.com/p/89f995c6fab2" target="_blank">vue-alain</a>出品
-    </global-footer>
-<!---->
-</div>
-</div>
-</div>
 </template>
 
 <script lang="ts">
-import {
-    Component,
-    Prop,
-    Vue,
-} from 'vue-property-decorator';
-import {
-    State,
-    Mutation,
-    namespace,
-} from 'vuex-class';
+    import {
+        Component,
+        Prop,
+        Vue,
+    } from 'vue-property-decorator';
+    import {
+        State,
+        Mutation,
+        namespace,
+    } from 'vuex-class';
 
-import GlobalFooter from '@/components/globalfooter/Index.vue';
+    import GlobalFooter from '@/components/globalfooter/Index.vue';
 
-@Component({
-    components: {
-        GlobalFooter,
-    },
-})
-export default class PassportLayout extends Vue {
+    @Component({
+        components: {
+            GlobalFooter,
+        },
+    })
+    export default class PassportLayout extends Vue {
 
-    private links: any[] = [{
+        private links: any[] = [{
             title: '帮助',
             href: '//www.jianshu.com/u/f6ef3106bada',
             blankTarget: true,
         },
-        {
-            title: '隐私',
-            href: '//www.jianshu.com/u/f6ef3106bada',
-            blankTarget: true,
-        },
-        {
-            title: '条款',
-            href: '//www.jianshu.com/u/f6ef3106bada',
-            blankTarget: true,
-        },
-    ];
-    constructor() {
-        super();
-    }
+            {
+                title: '隐私',
+                href: '//www.jianshu.com/u/f6ef3106bada',
+                blankTarget: true,
+            },
+            {
+                title: '条款',
+                href: '//www.jianshu.com/u/f6ef3106bada',
+                blankTarget: true,
+            },
+        ];
 
-}
+        constructor() {
+            super();
+        }
+
+    }
 </script>
 
 
 <style lang="less">
-@import '../../assets/theme/styles/index.less';
+    @import '../../assets/theme/styles/index.less';
 
-.passport {
-    .container {
+    .passport {
+        .container {
             display: flex;
             flex-direction: column;
             min-height: 100%;
@@ -135,5 +135,5 @@ export default class PassportLayout extends Vue {
             margin-top: 12px;
             margin-bottom: 40px;
         }
-}
+    }
 </style>

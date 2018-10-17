@@ -1,31 +1,26 @@
 <template>
-  <a-locale-provider :locale="locale">
-    <div id="app" :class="{'aside-collapsed':isCollapse}">
-      <router-view/>
-    </div>
-  </a-locale-provider>
+    <a-locale-provider :locale="locale">
+        <div id="app" :class="{'aside-collapsed':isCollapse}">
+            <router-view/>
+        </div>
+    </a-locale-provider>
 </template>
 
-<style lang="less">
+<script lang="ts">
+    import {Component, Prop, Vue} from 'vue-property-decorator';
+    import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN';
 
-</style>
+    import {State, Mutation, namespace} from 'vuex-class';
 
-<script  lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import zhCN from 'ant-design-vue/lib/locale-provider/zh_CN';
+    const appModule = namespace('app');
 
-import { State, Mutation, namespace } from 'vuex-class';
-const appModule = namespace('app');
+    @Component({
+        components: {},
+    })
 
-@Component({
-  components: {
-  },
-})
-export default class App extends Vue {
-
-  private locale: any = zhCN;
-
-  @appModule.State('isCollapse')
-  private isCollapse!: boolean;
-}
+    export default class App extends Vue {
+        private locale: any = zhCN;
+        @appModule.State('isCollapse')
+        private isCollapse!: boolean;
+    }
 </script>
