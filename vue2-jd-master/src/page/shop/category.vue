@@ -178,9 +178,4 @@
       this.initData();
     }
   }
-
 </script>
-<style lang='scss' scoped>
-
-
-</style>
